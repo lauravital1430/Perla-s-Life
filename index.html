@@ -29,7 +29,6 @@
 
         h2 {
             font-size: 48pt;
-
         }
 
         a {
@@ -41,7 +40,6 @@
             height: 150px;
             background-color: white;
             padding: 25px 80px;
-
             overflow: hidden;
         }
 
@@ -87,18 +85,30 @@
         }
 
         .hero-columnas:nth-first-child {
-            width: 40%;
+            width: 60%;
+
         }
 
         .hero-columnas:nth-last-child {
-
-            width: 60%;
+            width: 40%;
             margin: 30px;
         }
 
         .hero-columnas img {
             width: auto;
             height: 100%;
+            transition: 0.5s;
+        }
+
+        .hero-img {
+            width: 468px;
+            height: 665px;
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+        }
+
+        .hero-columnas img:hover {
+            transform: scale(1.3);
         }
 
         .resaltado {
@@ -163,6 +173,14 @@
             width: 40%;
         }
 
+        .caracteristicas-columnas img {
+            transition: 0.5s;
+        }
+
+        .caracteristicas-columnas img:hover {
+            transform: scale(1.1);
+        }
+
         .personalidad {
             width: 1920px;
             height: 1230px;
@@ -172,7 +190,6 @@
 
         .personalidades {
             display: flex;
-            align-items: center;
             margin: 80px;
             gap: 90px;
         }
@@ -198,10 +215,81 @@
             padding: 20px;
             border-radius: 10px;
             color: white;
+
+        }
+
+        .h3-container {
+            width: auto;
+            height: auto;
+            position: relative;
+        }
+
+        .star1 {
+            position: absolute;
+            bottom: 10px;
+            left: 342px;
+            opacity: 0%;
+            transform: scale(0);
+        }
+
+        .star2 {
+            position: absolute;
+            top: 19px;
+            left: 320px;
+            opacity: 0%;
+            transform: scale(0);
+        }
+
+        .star3 {
+            position: absolute;
+            top: 22px;
+            left: 354px;
+            opacity: 0%;
+            transform: scale(0);
+
+        }
+        .h3-container:hover .star1{
+            animation: stars 1s ease-in-out 0s infinite;
+        }
+
+        .h3-container:hover .star2 {
+            animation: stars 1s ease-in-out 0.3s infinite;
+        }
+
+        .h3-container:hover .star3 {
+            animation: stars 1s ease-in-out 0.6s infinite;
+        }
+
+        @keyframes stars {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
         }
 
         .personalidades-columnas img {
+            transition: 0.5s;
+        }
+
+        .personalidades-columnas img:hover {
+            transform: scale(1.3);
+        }
+
+        .personalidades-imgs {
             border-radius: 10px;
+            height: 415px;
+            width: 415px;
+            overflow: hidden;
         }
 
         .personalidades p {
@@ -217,7 +305,7 @@
             height: 400px;
             background-color: #A330A5;
             padding: 60px 171px;
-            
+
         }
 
         footer p,
@@ -233,7 +321,7 @@
         footer a {
 
             font-family: "Grandstander";
-            
+
             padding: 20px 40px;
             border-radius: 50px;
         }
@@ -246,10 +334,10 @@
 
         footer small {
             font-family: "Grandstander";
-
             font-size: 10pt;
         }
-        .footer-contenidos-abajo{
+
+        .footer-contenidos-abajo {
             display: flex;
             align-items: center;
             gap: 400px;
@@ -275,7 +363,7 @@
     </div>
     <section class="hero">
         <div class="hero-columnas">
-            <img src="img/perla.png" alt="Perla">
+            <div class="hero-img"><img src="img/perla.png" alt="Perla"></div>
         </div>
         <div class="hero-columnas">
             <h2>No soy una gata cualquiera.</h2>
@@ -307,10 +395,16 @@
         <h2>La Dama del Caos y la Siesta</h2>
         <div class="personalidades">
             <div class="personalidades-columnas">
-                <img src="img/perla_divertida.png" alt="Perla Divertida">
+                <div class="personalidades-imgs"><img src="img/perla_divertida.png" alt="Perla Divertida"></div>
             </div>
             <div class="personalidades-columnas">
-                <h3>La Divertida</h3>
+
+                <div class="h3-container">
+                    <div class="star1"><img src="img/star_1.svg" alt="star1"></div>
+                    <div class="star2"><img src="img/star_2.svg" alt="star1"></div>
+                    <div class="star3"><img src="img/star_3.svg" alt="star1"></div>
+                    <h3>La Divertida</h3>
+                </div>
                 <p>No te dejes engañar por su cara de ángel. Cuando Perla se activa, es una verdadera acróbata del caos.
                 </p>
                 <ol>
@@ -323,10 +417,17 @@
         </div>
         <div class="personalidades">
             <div class="personalidades-columnas">
-                <img src="img/perla_dormida.png" alt="Perla Divertida">
+                <div class="personalidades-imgs"><img src="img/perla_dormida.png" alt="Perla Divertida"></div>
             </div>
             <div class="personalidades-columnas">
-                <h3>La Dormilona</h3>
+
+                <div class="h3-container">
+                    <div class="star1"><img src="img/star_1.svg" alt="star1"></div>
+                    <div class="star2"><img src="img/star_2.svg" alt="star1"></div>
+                    <div class="star3"><img src="img/star_3.svg" alt="star1"></div>
+                    <h3>La Dormilona</h3>
+
+                </div>
                 <p>Pero así como se enciende, se apaga. Perla es la campeona olímpica de la siesta.</p>
                 <ol>
                     <li>Puede dormir en posiciones que desafían la física (y la lógica).</li>
@@ -342,25 +443,25 @@
         <p>Perla no es solo una gata; es un personaje, una compañera y una fuente inagotable de risas y amor. Si alguna
             vez te preguntas cómo es tener una siamesa Red Point, solo recuerda: es como tener una princesa que ronca y
             derriba vasos con la cola.</p>
-            <div class="footer-contenidos-abajo">
-                <div class="footer-columnas">
-            <div class="contenidos">
-                <img src="img/logo_invertido.svg" alt="Perla's Life logo">
-            </div>
-            <div class="contenidos">
-                <small>© 2026 - Hecho con mucho ronroneo y pelo de gato pegado a la
-                    pantalla.
-                </small>
-            </div>
+        <div class="footer-contenidos-abajo">
+            <div class="footer-columnas">
+                <div class="contenidos">
+                    <img src="img/logo_invertido.svg" alt="Perla's Life logo">
+                </div>
+                <div class="contenidos">
+                    <small>© 2026 - Hecho con mucho ronroneo y pelo de gato pegado a la
+                        pantalla.
+                    </small>
+                </div>
 
-        </div>
-        <div class="footer-columnas">
-            <a href="#">Inicio</a>
-            <a href="#Caracteristicas">Caracteristicas</a>
-            <a href="#Personalidad">Personalidad</a>
-        </div>
             </div>
-        
+            <div class="footer-columnas">
+                <a href="#">Inicio</a>
+                <a href="#Caracteristicas">Caracteristicas</a>
+                <a href="#Personalidad">Personalidad</a>
+            </div>
+        </div>
+
 
 
     </footer>
