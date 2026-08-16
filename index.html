@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perla's Life</title>
+    <link rel="icon" type="image/png" href="img/icono.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Inter";
+            font-size: 18pt;
+            color: black;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2,
+        h3 {
+            font-family: "Grandstander";
+            font-weight: normal;
+        }
+
+        h2 {
+            font-size: 48pt;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            width: 1920px;
+            height: 150px;
+            background-color: white;
+            padding: 25px 80px;
+
+            overflow: hidden;
+        }
+
+        nav {
+            display: block;
+            float: right;
+            margin: 35px 0px;
+        }
+
+        nav a {
+            font-family: "Grandstander";
+            height: 90px;
+            color: #A330A5;
+            padding: 20px 40px;
+            border-radius: 50px;
+        }
+
+        nav a:hover {
+            color: white;
+            background-color: #A330A5;
+            transition: 0.3s;
+        }
+
+        .flecha {
+            z-index: 2;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
+
+        .flecha img {
+            height: 100px;
+            width: auto;
+        }
+
+        .hero {
+            width: 1920px;
+            height: 715px;
+            padding: 50px 280px 0px 280px;
+            display: flex;
+            position: relative;
+            gap: 80px;
+        }
+
+        .hero-columnas:nth-first-child {
+            width: 40%;
+        }
+
+        .hero-columnas:nth-last-child {
+
+            width: 60%;
+            margin: 30px;
+        }
+
+        .hero-columnas img {
+            width: auto;
+            height: 100%;
+        }
+
+        .resaltado {
+            font-family: "Grandstander";
+            font-size: 48pt;
+            font-weight: normal;
+            color: #A330A5;
+        }
+
+        .hero-columnas p {
+            margin-top: 70px;
+            padding-right: 50px
+        }
+
+        .divisor {
+            width: 950px;
+            height: 100px;
+            background-color: #A330A5;
+            position: absolute;
+            right: 222px;
+            bottom: 0px;
+
+            border-radius: 0 10px 0 0;
+        }
+
+        article {
+            height: 935px;
+            width: 1920px;
+            background-color: #A330A5;
+            padding: 100px 260px;
+            display: flex;
+            align-items: center;
+        }
+
+        article h2,
+        article li,
+        article p {
+            color: white;
+        }
+
+        article h2 {
+            margin-bottom: 80px;
+        }
+
+        article li {
+            font-size: 30pt;
+            font-family: "Grandstander";
+            margin: 40px 0 0 60px;
+
+        }
+
+        article ul p {
+            margin-left: 80px;
+        }
+
+        .caracteristicas-columnas:nth-first-child {
+            width: 60%;
+
+        }
+
+        .caracteristicas-columnas:nth-last-child {
+            width: 40%;
+        }
+
+        .personalidad {
+            width: 1920px;
+            height: 1230px;
+            padding: 100px 200px;
+            margin-bottom: 60px;
+        }
+
+        .personalidades {
+            display: flex;
+            align-items: center;
+            margin: 80px;
+            gap: 90px;
+        }
+
+        .personalidades-columnas:nth-first-child {
+            width: 40%;
+        }
+
+        .personalidades-columnas:nth-last-child {
+            width: 60%;
+
+        }
+
+        .personalidad h2 {
+            color: #A330A5;
+            text-align: center;
+        }
+
+        .personalidades h3 {
+            font-size: 30pt;
+            margin-bottom: 40px;
+            background-color: #A330A5;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .personalidades-columnas img {
+            border-radius: 10px;
+        }
+
+        .personalidades p {
+            margin-bottom: 30px;
+        }
+
+        .personalidades li {
+            margin-left: 60px;
+        }
+
+        footer {
+            width: 1920px;
+            height: 400px;
+            background-color: #A330A5;
+            padding: 60px 171px;
+            
+        }
+
+        footer p,
+        footer a,
+        footer small {
+            color: white;
+        }
+
+        footer p {
+            margin-bottom: 90px;
+        }
+
+        footer a {
+
+            font-family: "Grandstander";
+            
+            padding: 20px 40px;
+            border-radius: 50px;
+        }
+
+        footer a:hover {
+            color: #A330A5;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        footer small {
+            font-family: "Grandstander";
+
+            font-size: 18pt;
+        }
+        .footer-contenidos-abajo{
+            display: flex;
+            align-items: center;
+        }
+
+        .contenidos {
+            display: block;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header> <img src="img/logo.svg" alt="Perla's Life logo">
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#Caracteristicas">Caracteristicas</a>
+            <a href="#Personalidad">Personalidad</a>
+        </nav>
+    </header>
+    <div class="flecha">
+        <a href="#"><img src="img/arrow.svg" alt="flecha"></a>
+    </div>
+    <section class="hero">
+        <div class="hero-columnas">
+            <img src="img/perla.png" alt="Perla">
+        </div>
+        <div class="hero-columnas">
+            <h2>No soy una gata cualquiera.</h2>
+            <h2> Soy una <span class="resaltado">obra de arte</span> en movimiento.</h2>
+            <p>Bienvenido al rincón más elegante (y somnoliento) de internet. Aquí celebramos a Perla, una Siamesa Red
+                Point que robó corazones desde el primer maullido.</p>
+        </div>
+        <div class="divisor"></div>
+    </section>
+    <article id="Caracteristicas">
+        <div class="caracteristicas-columnas">
+            <h2>Belleza en Tonos Cálidos</h2>
+            <ul>
+
+                <li>Sus ojos</li>
+                <p>Dos zafiros líquidos que hipnotizan a cualquiera que se atreva a mirarlos fijamente.</p>
+                <li>Su Máscara</li>
+                <p>Ese tono tostado en su cara le da un aire de princesa egipcia, pero con un toque de traviesa.</p>
+                <li>Su Pelaje</li>
+                <p>Tan suave como el algodón de azúcar, digno de ser acariciado (solo cuando ella lo permite,
+                    claro).</p>
+            </ul>
+        </div>
+        <div class="caracteristicas-columnas">
+            <img src="img/perla_completa.png" alt="Perla Completa">
+        </div>
+    </article>
+    <section class="personalidad" id="Personalidad">
+        <h2>La Dama del Caos y la Siesta</h2>
+        <div class="personalidades">
+            <div class="personalidades-columnas">
+                <img src="img/perla_divertida.png" alt="Perla Divertida">
+            </div>
+            <div class="personalidades-columnas">
+                <h3>La Divertida</h3>
+                <p>No te dejes engañar por su cara de ángel. Cuando Perla se activa, es una verdadera acróbata del caos.
+                </p>
+                <ol>
+                    <li>Especialista en emboscadas detrás de las cortinas.</li>
+                    <li>Persigue sombras y puntos láser como si su vida dependiera de ello.</li>
+                    <li>Tiene el don de aparecer en el lugar exacto donde estás a punto de poner un pie, haciendo de sus
+                        dueños unos expertos en esquivar gatos.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="personalidades">
+            <div class="personalidades-columnas">
+                <img src="img/perla_dormida.png" alt="Perla Divertida">
+            </div>
+            <div class="personalidades-columnas">
+                <h3>La Dormilona</h3>
+                <p>Pero así como se enciende, se apaga. Perla es la campeona olímpica de la siesta.</p>
+                <ol>
+                    <li>Puede dormir en posiciones que desafían la física (y la lógica).</li>
+                    <li>Su ronroneo es el sonido más relajante del mundo, siempre y cuando no estés intentando ver la
+                        televisión.</li>
+                    <li>Si la ves dormir, entenderás por qué los egipcios las adoraban: parece una pequeña esfinge en
+                        reposo.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Perla no es solo una gata; es un personaje, una compañera y una fuente inagotable de risas y amor. Si alguna
+            vez te preguntas cómo es tener una siamesa Red Point, solo recuerda: es como tener una princesa que ronca y
+            derriba vasos con la cola.</p>
+            <div class="footer-contenidos-abajo">
+                <div class="footer-columnas">
+            <div class="contenidos">
+                <img src="img/logo_invertido.svg" alt="Perla's Life logo">
+            </div>
+            <div class="contenidos">
+                <small>© 2026 - Hecho con mucho ronroneo y pelo de gato pegado a la
+                    pantalla.
+                </small>
+            </div>
+
+        </div>
+        <div class="footer-columnas">
+            <a href="#">Inicio</a>
+            <a href="#Caracteristicas">Caracteristicas</a>
+            <a href="#Personalidad">Personalidad</a>
+        </div>
+            </div>
+        
+
+
+    </footer>
+</body>
+
+</html>
